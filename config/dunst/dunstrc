@@ -1,0 +1,171 @@
+### Dunst-Config ###
+
+
+
+[global]
+monitor =0  # monitor preffered 
+follow = mouse  #can be set to keyboard or mouse
+
+#dimentions ETC
+	width = 300
+	height = (0, 200)
+	origin = top-right
+	offset = (10, 10)
+	scale = 0
+	corner_radius = 2
+	corners = all
+
+	notification limit = 10
+# Show how many messages are currently hidden (because of
+# notification_limit).
+	indicate_hidden = yes
+	idle_threshold = 60 
+
+
+### Progress bar ###
+
+# Turn on the progress bar. It appears when a progress hint is passed with
+# for example dunstify -h int:value:12
+	progress_bar = true
+
+# Set the progress bar height. This includes the frame, so make sure
+# it's at least twice as big as the frame width.
+	progress_bar_height = 10
+
+# Set the frame width of the progress bar
+	progress_bar_frame_width = 1
+
+# Set the minimum width for the progress bar
+	progress_bar_min_width = 150
+
+# Set the maximum width for the progress bar
+	progress_bar_max_width = 280
+
+# Corner radius for the progress bar. 0 disables rounded corners.
+	progress_bar_corner_radius = 2
+
+# Define which corners to round when drawing the progress bar. If progress_bar_corner_radius
+# is set to 0 this option will be ignored.
+	progress_bar_corners = all
+
+
+
+### Seperators ###
+# Draw a line of "separator_height" pixel height between two
+# notifications.
+# Set to 0 to disable.
+
+	separator_height = 2
+
+# Padding between text and separator.
+	padding = 8
+	horizontal_padding = 8
+	text_icon_padding = 0
+
+
+### frames ###
+	frame_width = 1
+    	frame_color = "#902DF3"
+
+# of size frame_width will be drawn around each notification instead.
+# Click events on gaps do not currently propagate to applications below.
+	gap_size = 0
+
+# Define a color for the separator.
+#  * auto: dunst tries to find a color fitting to the background;
+#  * foreground: use the same color as the foreground;
+#  * frame: use the same color as the frame;
+#  * anything else will be interpreted as a X color.
+	separator_color = frame
+
+
+	sort = yes
+
+	font = JetBrainsMono 11
+	line_height = 0
+
+	markup = full
+	format = "<b>%s</b>\n%b"
+
+	alignment = center
+
+# Possible values are "top", "center" and "bottom".
+	vertical_alignment = center 
+
+# Set to -1 to disable.
+	show_age_threshold = 60
+
+# Possible values are "start", "middle" and "end".
+	ellipsize = middle
+
+
+	ignore_newline = no
+	word_wrap = yes
+	stack_duplicates = true
+	hide_duplicate_count = false
+	show_indicators = yes
+
+### Icons ###
+
+	enable_recursive_icon_lookup = true
+	icon_theme = hicolor
+# icon_theme = "Adwaita, breeze"
+
+	icon_position = left
+	min_icon_size = 16
+	max_icon_size = 64
+
+	icon_path = /usr/share/icons/notify/:/usr/share/icons/hicolor/status/:/usr/share/icons/hicolor/devices/
+
+
+### History ###
+
+	sticky_history = yes
+	history_length = 15
+
+### Misc/Advanced ###
+	dmenu = /usr/bin/bemenu --prompt "dunst":
+
+# Browser for opening urls in context menu.
+	browser = /usr/bin/firefox
+
+
+
+### Window Title and shit ###
+	title = Dunst
+	class = Dunst
+
+
+### Mouse interractions ###
+	mouse_left_click = close_current
+	mouse_middle_click = do_action, close_current
+	mouse_right_click = close_all
+
+
+
+### Urgency Settings ###
+[urgency_low]
+	background = "#1E1E2E"
+	foreground = "#CDD6F4"
+	highlight = "#902DF3"
+	icon = /usr/share/icons/notify/bell.svg
+
+[urgency_normal]
+	background = "#1E1E2E"
+	foreground = "#CDD6F4"
+	icon = /usr/share/icons/notify/bell.svg
+
+[urgency_critical]
+	background = "#1E1E2E"
+	foreground = "#CDD6F4"
+	frame_color = "#ff0000"
+	timeout = 0
+	default_icon = dialog-warning
+
+
+[history-ignore]
+	#appname = brightness,volume
+	
+	stack_tag = "no"
+	#summary = *"Volume"
+	history_ignore = yes 
