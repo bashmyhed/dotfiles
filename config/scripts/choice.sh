@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Display a menu with options using bemenu
-choice=$(echo -e "Novel\nBook\nMaidenCorruption\nNurse\nManga\nHttpServer\nHatsukoi\nChome\nAquaBless\nSexEducation\nKyouKara\n1st" | bemenu \
+choice=$(echo -e "gemini\ngithub\nClaudeAI\nCV\nNovel\nBook\nMaidenCorruption\nNurse\nManga\nHttpServer\nHatsukoi\nChome\nAquaBless\nSexEducation\nKyouKara\n1st" | bemenu \
     -b \
     --fn "JetBrainsMono Nerd Font" \
     --binding vim \
@@ -19,6 +19,18 @@ choice=$(echo -e "Novel\nBook\nMaidenCorruption\nNurse\nManga\nHttpServer\nHatsu
 
 # Open the selected option in Firefox
 case "$choice" in
+    "genini") 
+        firefox --new-tab "https://gemini.google.com/u/0/"
+        ;;
+    "github") 
+        firefox --new-tab "https://github.com/bashmyhed"
+        ;;
+    "ClaudeAI") 
+        firefox --new-tab "https://claude.ai/"
+        ;;
+    "CV") 
+        firefox --new-tab "https://anigo.to/watch/black-butler-n431#ep=4"
+        ;;
     "Novel") 
         firefox --new-tab "file:///home/paul/Documents/Dark%20Mode%20Ver/An%20Archdemons%20Dilemma%20-%20How%20to%20Love%20Your%20Elf%20Bride%20-%20Volume%2007%20%E3%80%8EPremium%20Ver%E3%80%8F%20dark.pdf"
         ;;
