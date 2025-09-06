@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Display a menu with options using bemenu
-choice=$(echo -e "gemini\ngithub\nClaudeAI\nCV\nNovel\nBook\nMaidenCorruption\nNurse\nManga\nHttpServer\nHatsukoi\nChome\nAquaBless\nSexEducation\nKyouKara\n1st" | bemenu \
+choice=$(echo -e "gemini\ngithub\nClaudeAI\nCV\nNovel\nBook\nMaidenCorruption\nManga\nHttpServer\nHatsukoi\nChome\nAquaBless\nSexEducation\nKyouKara\n1st
+RegexOneLearnRegular" | bemenu \
     -b \
     --fn "JetBrainsMono Nerd Font" \
     --binding vim \
@@ -19,7 +20,7 @@ choice=$(echo -e "gemini\ngithub\nClaudeAI\nCV\nNovel\nBook\nMaidenCorruption\nN
 
 # Open the selected option in Firefox
 case "$choice" in
-    "genini") 
+    "gemini") 
         firefox --new-tab "https://gemini.google.com/u/0/"
         ;;
     "github") 
@@ -39,9 +40,6 @@ case "$choice" in
         ;;
     "MaidenCorruption") 
         firefox --new-tab "https://hentaifox.com/gallery/138180/"
-        ;;
-    "Nurse") 
-        firefox --new-tab "https://hentaifox.com/gallery/145030/"
         ;;
     "Manga") 
         firefox --new-tab "https://mangapark.net/title/45167-en-shurabara/383863-ch-003"
@@ -67,6 +65,10 @@ case "$choice" in
     "1st") 
         firefox --new-tab "https://kemono.cr/patreon/user/11946658"
         ;;
+    "RegexOneLearnRegular")
+        firefox --new-tab "https://regexone.com/"
+        ;;
+
     *) 
         exit 1 # Exit if no valid option is selected
         ;;
