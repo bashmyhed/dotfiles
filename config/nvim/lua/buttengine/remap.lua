@@ -5,3 +5,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>t", ':Neotree filesystem reveal left<CR>',{})
 vim.keymap.set("n", "K", 'vim.lsp.buf.hover', {})
 
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tms<CR>")
+
+vim.keymap.set('n', '<leader>s', ':Copilot disable<CR>', {
+  desc = 'Disable GitHub Copilot for the current buffer',
+  silent = true, -- Don't show the command in the command line
+})
+
