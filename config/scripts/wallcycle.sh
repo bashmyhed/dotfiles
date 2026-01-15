@@ -26,8 +26,15 @@ echo "$INDEX" > "$STATE"
 
 # Set wallpaper
 WALL="${WALLS[$INDEX]}"
-echo "preload = $WALL" > ~/.config/hypr/hyprpaper.conf
-echo "wallpaper = $OUTPUT,$WALL" >> ~/.config/hypr/hyprpaper.conf
+
+
+cat <<EOF > ~/.config/hypr/hyprpaper.conf
+wallpaper {
+    monitor = $OUTPUT
+    path = $WALL
+    fit_mode = cover
+}
+EOF
 
 # Restart hyprpaper to apply
 killall hyprpaper 2>/dev/null
