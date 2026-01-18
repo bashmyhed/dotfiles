@@ -12,12 +12,11 @@ alias snapop='sudo timeshift-launcher'
 alias ..='cd ..'
 alias c='clear'
 alias e='exit'
-alias s='startx'
 alias vim='nvim'
 alias vi='nvim'
-alias clip="xclip -selection clipboard"
 alias jour=".config/scripts/journal.sh"
 alias py="source ~/.local/share/venv/default/bin/activate.fish"
+alias svim="sudo -E nvim"
 #alias cd='z'
 
 
