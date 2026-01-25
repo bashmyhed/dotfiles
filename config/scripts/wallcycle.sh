@@ -34,6 +34,7 @@ wallpaper {
     path = $WALL
     fit_mode = cover
 }
+splash = false
 EOF
 
 # Restart hyprpaper to apply
