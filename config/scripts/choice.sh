@@ -20,53 +20,53 @@ RegexOneLearnRegular" | bemenu \
 
 # Open the selected option in Firefox
 case "$choice" in
-    "gemini") 
-        firefox --new-tab "https://gemini.google.com/u/0/"
+        "gemini") 
+        brave --profile-directory="Default" --reuse-window --new-tab "https://gemini.google.com/u/0/"
         ;;
     "github") 
-        firefox --new-tab "https://github.com/bashmyhed"
+        brave --profile-directory="Default" --reuse-window --new-tab "https://github.com/bashmyhed"
         ;;
     "ClaudeAI") 
-        firefox --new-tab "https://claude.ai/"
+        brave --profile-directory="Default" --reuse-window --new-tab "https://claude.ai/"
         ;;
     "CV") 
-        firefox --new-tab "https://anigo.to/watch/black-butler-n431#ep=4"
+        brave --profile-directory="Default" --reuse-window --new-tab "https://anigo.to/watch/black-butler-n431#ep=4"
         ;;
     "Novel") 
-        firefox --new-tab "file:///home/paul/Documents/Dark%20Mode%20Ver/An%20Archdemons%20Dilemma%20-%20How%20to%20Love%20Your%20Elf%20Bride%20-%20Volume%2007%20%E3%80%8EPremium%20Ver%E3%80%8F%20dark.pdf"
+        brave --profile-directory="Default" --reuse-window --new-tab "file:///home/paul/Documents/Dark%20Mode%20Ver/An%20Archdemons%20Dilemma%20-%20How%20to%20Love%20Your%20Elf%20Bride%20-%20Volume%2007%20%E3%80%8EPremium%20Ver%E3%80%8F%20dark.pdf"
         ;;
     "Book") 
-       firefox --new-tab ~/Documents/Let\'s\ Go\ \[Alex\ Edwards\].pdf  
+       brave --profile-directory="Default" --reuse-window --new-tab ~/Documents/Let\'s\ Go\ \[Alex\ Edwards\].pdf  
         ;;
     "MaidenCorruption") 
-        firefox --new-tab "https://hentaifox.com/gallery/138180/"
+        brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/gallery/138180/"
         ;;
     "Manga") 
-        firefox --new-tab "https://mangapark.net/title/45167-en-shurabara/383863-ch-003"
+        brave --profile-directory="Default" --reuse-window --new-tab "https://mangapark.net/title/45167-en-shurabara/383863-ch-003"
         ;;
     "HttpServer") 
-        firefox --new-tab "https://app.codecrafters.io/courses/http-server/introduction"
+        brave --profile-directory="Default" --reuse-window --new-tab "https://app.codecrafters.io/courses/http-server/introduction"
         ;;
     "Hatsukoi") 
-        firefox --new-tab "https://hentaifox.com/gallery/140470/"
+        brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/gallery/140470/"
         ;;
     "Chome") 
-        firefox --new-tab "https://hentaifox.com/gallery/140467/"
+        brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/gallery/140467/"
         ;;
     "AquaBless") 
-        firefox --new-tab "https://hentaifox.com/gallery/140544/"
+        brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/gallery/140544/"
         ;;
     "SexEducation") 
-        firefox --new-tab "https://hentaifox.com/g/142424/1/"
+        brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/g/142424/1/"
         ;;
     "KyouKara") 
-        firefox --new-tab "https://hentaifox.com/search/?q=Hitozuma+Mansion+ni+Nyuukyo+shimasu"
+        brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/search/?q=Hitozuma+Mansion+ni+Nyuukyo+shimasu"
         ;;
     "1st") 
-        firefox --new-tab "https://kemono.cr/patreon/user/11946658"
+        brave --profile-directory="Default" --reuse-window --new-tab "https://kemono.cr/patreon/user/11946658"
         ;;
     "RegexOneLearnRegular")
-        firefox --new-tab "https://regexone.com/"
+        brave --profile-directory="Default" --reuse-window --new-tab "https://regexone.com/"
         ;;
 
     *) 
