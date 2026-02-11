@@ -7,12 +7,12 @@ monitor =0  # monitor preffered
 follow = mouse  #can be set to keyboard or mouse
 
 #dimentions ETC
-	width = 300
+	width = (200,300)
 	height = (0, 200)
 	origin = top-right
-	offset = (10, 10)
+	offset = (8, 8)
 	scale = 0
-	corner_radius = 2
+	corner_radius = 4
 	corners = all
 
 	notification limit = 10
@@ -65,7 +65,7 @@ follow = mouse  #can be set to keyboard or mouse
 
 ### frames ###
 	frame_width = 1
-    	frame_color = "#902DF3"
+    	frame_color = "#263238FF"
 
 # of size frame_width will be drawn around each notification instead.
 # Click events on gaps do not currently propagate to applications below.
