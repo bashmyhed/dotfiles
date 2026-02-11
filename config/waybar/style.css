@@ -1,194 +1,149 @@
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
-    font-size: 11px;
-    min-height: 0;
+  min-height: 0;
+  min-width: 0;
+  font-family: Lexend, "JetBrainsMono NFP";
+  font-size: 13px;
+  font-weight: 500;
 }
 
 window#waybar {
-    background: transparent;
-    color: #ffffff;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  /* background-color: #1e1e2e; */
+  /* background-color: #181825; */
+  background-color: #11111b;
+  border-radius: 0px 0px 8px 8px;
+  /* background-color: rgba(24, 24, 37, 0.6); */
 }
 
-/* Color Palette Suggestions - Mix and Match:
-   
-   Purple Themes:
-   - Light to Dark Purple: #b794f6, #805ad5
-   - Purple to Pink: #a78bfa, #d946ef
-   - Lavender: #ddd6fe, #a855f7
-   
-   Blue Themes:
-   - Ocean Blue: #60a5fa, #1e40af
-   - Cyan: #06b6d4, #0891b2
-   - Sky Blue: #7dd3fc, #0284c7
-   
-   Green Themes:
-   - Mint: #6ee7b7, #059669
-   - Forest: #34d399, #047857
-   - Lime: #a3e635, #65a30d
-   
-   Pink Themes:
-   - Rose: #fb7185, #e11d48
-   - Hot Pink: #f472b6, #db2777
-   - Coral: #fca5a5, #dc2626
-   
-   Orange/Yellow:
-   - Sunset: #fbbf24, #d97706
-   - Amber: #fcd34d, #f59e0b
-   - Peach: #fed7aa, #ea580c
-   
-   Dark Themes:
-   - Slate: #64748b, #334155
-   - Gray: #6b7280, #374151
-   - Dark Purple: #6b46c1, #4c1d95
-*/
-
 #workspaces {
-    background: transparent;
-    border-radius: 4px;
-    padding: 2px 0px;
-    margin: 2px 0;
+  margin-left: 4px;
 }
 
 #workspaces button {
-    padding: 4px 12px;
-    color: #ffffff;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    background: linear-gradient(90deg, #b794f6, #805ad5);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  /* background-color: #181825; */
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+}
+
+#workspaces button:hover {
+  color: #1e1e2e;
+  background-color: #cdd6f4;
 }
 
 #workspaces button.active {
-    background: linear-gradient(90deg, #ddd6fe, #a855f7);
-    color: #ffffff;
-    font-weight: bold;
+  background-color: #1e1e2e;
+  color: #89b4fa;
 }
 
-/* Center module */
-#clock {
-    background: linear-gradient(90deg, #b794f6, #805ad5);
-    color: #ffffff;
-    border-radius: 4px;
-    padding: 4px 16px;
-    margin: 2px 0;
-    font-weight: bold;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+#workspaces button.urgent {
+  background-color: #1e1e2e;
+  color: #f38ba8;
 }
 
-/* Right modules - individual bubbles */
-#power-profiles-daemon {
-    background: linear-gradient(90deg, #b794f6, #805ad5);
-    color: #ffffff;
-    border-radius: 4px;
-    padding: 4px 12px;
-    margin: 2px 2px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+#clock,
+#pulseaudio,
+#custom-logo,
+#custom-power,
+#custom-spotify,
+#custom-notification,
+#cpu,
+#tray,
+#memory,
+#window,
+#mpris {
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  /* background-color: #181825; */
+  background-color: #1e1e2e;
 }
 
-#cpu {
-    background: linear-gradient(90deg, #b794f6, #805ad5);
-    color: #ffffff;
-    border-radius: 4px;
-    padding: 4px 12px;
-    margin: 2px 2px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+#custom-power {
+  margin-right: 8px;
 }
 
-#memory {
-    background: linear-gradient(90deg, #b794f6, #805ad5);
-    color: #ffffff;
-    border-radius: 4px;
-    padding: 4px 12px;
-    margin: 2px 2px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+#mpris.playing {
+  color: #a6e3a1;
 }
 
-#battery {
-    background: linear-gradient(90deg, #b794f6, #805ad5);
-    color: #ffffff;
-    border-radius: 4px;
-    padding: 4px 12px;
-    margin: 2px 2px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+#mpris.paused {
+  color: #9399b2;
 }
 
-#battery.charging {
-    background: linear-gradient(90deg, #6ee7b7, #059669);
-    color: #ffffff;
+#custom-sep {
+  padding: 0px;
+  color: #585b70;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+#battery.good {
+  color: #89b4fa; /* Blue - 60% or above */
 }
 
 #battery.warning {
-    background: linear-gradient(90deg, #fcd34d, #f59e0b);
-    color: #ffffff;
+  color: #a6e3a1; /* Green - between 40-60% */
 }
 
 #battery.critical {
-    background: linear-gradient(90deg, #fca5a5, #dc2626);
-    color: #ffffff;
+  color: #f38ba8; /* Red - under 40% */
 }
 
+#battery.charging {
+  color: #a6e3a1; /* Green when charging */
+}
+
+/* WiFi indicator */
 #network {
-    background: linear-gradient(90deg, #b794f6, #805ad5);
-    color: #ffffff;
-    border-radius: 4px;
-    padding: 4px 12px;
-    margin: 2px 2px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: #89b4fa; /* Blue for connected */
 }
 
 #network.disconnected {
-    background: linear-gradient(90deg, #fca5a5, #dc2626);
-    color: #ffffff;
+  color: #f38ba8; /* Red when disconnected */
 }
 
-#bluetooth {
-    background: linear-gradient(90deg, #b794f6, #805ad5);
-    color: #ffffff;
-    border-radius: 4px;
-    padding: 4px 12px;
-    margin: 2px 2px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+#cpu {
+  color: #94e2d5;
 }
 
-#tray {
-    background: linear-gradient(90deg, #b794f6, #805ad5);
-    border-radius: 4px;
-    padding: 2px 8px;
-    margin: 2px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+#memory {
+  color: #cba6f7;
 }
 
-#tray > .passive {
-    -gtk-icon-effect: dim;
+#clock {
+  color: #74c7ec;
 }
 
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: rgba(224, 108, 117, 0.3);
-    border-radius: 8px;
+#clock.simpleclock {
+  color: #89b4fa;
 }
 
-/* Hover effects */
-#workspaces button:hover,
-#clock:hover,
-#power-profiles-daemon:hover,
-#cpu:hover,
-#memory:hover,
-#battery:hover,
-#network:hover,
-#bluetooth:hover,
-#tray:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease;
+#window {
+  color: #cdd6f4;
 }
 
-/* Tooltip styling */
+#pulseaudio {
+  color: #b4befe;
+}
+
+#pulseaudio.muted {
+  color: #a6adc8;
+}
+
+#custom-logo {
+  color: #89b4fa;
+}
+
+#custom-power {
+  color: #f38ba8;
+}
+
 tooltip {
-    background: rgba(40, 44, 52, 0.95);
-    border-radius: 4px;
-    border: 1px solid rgba(171, 178, 191, 0.2);
-    color: #abb2bf;
-    padding: 8px;
+  background-color: #181825;
+  border: 2px solid #181825;
 }

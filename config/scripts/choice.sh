@@ -4,11 +4,12 @@
 choice=$(echo -e "gemini\ngithub\nClaudeAI\nCV\nNovel\nBook\nMaidenCorruption\nManga\nHttpServer\nHatsukoi\nChome\nAquaBless\nSexEducation\nKyouKara\n1st
 RegexOneLearnRegular" | bemenu \
     -b \
+    -R 4 \
     --fn "JetBrainsMono Nerd Font" \
     --binding vim \
     --nb "#000000" --nf "#ffffff" \
     --tb "#000000" --tf "#ffffff" \
-    --hb "#000000" --hf "#902DF3" \
+    --hb "#000000" --hf "#89b4fa" \
     --ab "#000000" --af "#ffffff" \
     --sb "#000000" --sf "#ffffff" \
     --vim-esc-exits \
