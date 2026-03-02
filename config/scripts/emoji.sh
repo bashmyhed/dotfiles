@@ -30,7 +30,10 @@ BEMENU_OPTS="
     --fn JetBrainsMono Nerd Font
     --binding vim
     -R 9
-        --nb "#181825d9" --nf "#ffffff"
+    -B 1 
+    -R 4 
+    --bdr "#263238FF" 
+    --nb "#181825d9" --nf "#ffffff"
     --tb "#181825d9" --tf "#ffffff"
     --hb "#181825d9" --hf "#89b4fa"
     --ab "#181825d9" --af "#ffffff"

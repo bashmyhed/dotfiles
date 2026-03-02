@@ -6,6 +6,7 @@
 monitor =0  # monitor preffered 
 follow = mouse  #can be set to keyboard or mouse
 
+
 #dimentions ETC
 	width = (200,300)
 	height = (0, 200)

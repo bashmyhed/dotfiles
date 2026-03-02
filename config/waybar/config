@@ -25,6 +25,7 @@
     "custom/power"
   ],
   "battery": {
+       "on-click-right": "~/.config/scripts/togglePower.sh",
     "states": {
       "good": 60,
       "warning": 40,
@@ -97,6 +98,7 @@
   "custom/power": {
     "tooltip": false,
     "on-click": "hyprlock ",
+     "on-click-right": "systemctl poweroff",
     "format": "⏻"
   },
   "custom/notification": {

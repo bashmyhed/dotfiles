@@ -4,6 +4,9 @@
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     # Running on Wayland
     cliphist list | bemenu -b -l 5 -B 0 --fn "JetBrainsMono Nerd Font" -R 4 \
+        -B 1 \
+        -R 4 \
+        --bdr "#263238FF" \
         --binding vim  \
         --nb "#181825d9" --nf "#ffffff" \
         --tb "#181825d9" --tf "#ffffff" \

@@ -1,9 +1,16 @@
 #!/bin/bash
 
 # Display a menu with options using bemenu
-choice=$(echo -e "gemini\ngithub\nClaudeAI\nCV\nNovel\nBook\nMaidenCorruption\nManga\nHttpServer\nHatsukoi\nChome\nAquaBless\nSexEducation\nKyouKara\n1st
-RegexOneLearnRegular" | bemenu \
+choice=$(echo -e "github\nCV\nNovel\nJavTable\nJavHDVideos\nBook\nMaidenCorruption\nManga\nHttpServer
+JavHDVideos
+RegexOneLearnRegular
+SeikousaiSchoolLoveF
+MFYD028IHadSexWithMy
+GovernmentofWestBeng"| bemenu \
     -b \
+    -R 4 \
+    -w \
+    -B 1 \
     -R 4 \
     --fn "JetBrainsMono Nerd Font" \
     --binding vim \
@@ -14,6 +21,7 @@ RegexOneLearnRegular" | bemenu \
     --sb "#181825d9" --sf "#ffffff" \
     --cb "#181825d9" --cf "#ffffff" \
     --fb "#181825d9" --ff "#ffffff" \
+    --bdr "#263238FF" \
     --vim-esc-exits \
     --vim-normal-mode \
     -W 0.3 \
@@ -23,19 +31,16 @@ RegexOneLearnRegular" | bemenu \
 
 # Open the selected option in Firefox
 case "$choice" in
-        "gemini") 
-        brave --profile-directory="Default" --reuse-window --new-tab "https://gemini.google.com/u/0/"
-        ;;
     "github") 
         brave --profile-directory="Default" --reuse-window --new-tab "https://github.com/bashmyhed"
-        ;;
-    "ClaudeAI") 
-        brave --profile-directory="Default" --reuse-window --new-tab "https://claude.ai/"
         ;;
     "CV") 
         brave --profile-directory="Default" --reuse-window --new-tab "https://anigo.to/watch/black-butler-n431#ep=4"
         ;;
     "Novel") 
+        zathura zathura  ~/Documents/Dark\ Mode\ Ver/An\ Archdemons\ Dilemma\ -\ How\ to\ Love\ Your\ Elf\ Bride\ -\ Volume\ 07\ 『Premium\ Ver』\ dark.pdf
+
+ 
         brave --profile-directory="Default" --reuse-window --new-tab "file:///home/paul/Documents/Dark%20Mode%20Ver/An%20Archdemons%20Dilemma%20-%20How%20to%20Love%20Your%20Elf%20Bride%20-%20Volume%2007%20%E3%80%8EPremium%20Ver%E3%80%8F%20dark.pdf"
         ;;
     "Book") 
@@ -50,26 +55,27 @@ case "$choice" in
     "HttpServer") 
         brave --profile-directory="Default" --reuse-window --new-tab "https://app.codecrafters.io/courses/http-server/introduction"
         ;;
-    "Hatsukoi") 
-        brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/gallery/140470/"
-        ;;
-    "Chome") 
-        brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/gallery/140467/"
-        ;;
-    "AquaBless") 
-        brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/gallery/140544/"
-        ;;
-    "SexEducation") 
-        brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/g/142424/1/"
-        ;;
-    "KyouKara") 
-        brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/search/?q=Hitozuma+Mansion+ni+Nyuukyo+shimasu"
-        ;;
-    "1st") 
-        brave --profile-directory="Default" --reuse-window --new-tab "https://kemono.cr/patreon/user/11946658"
-        ;;
     "RegexOneLearnRegular")
         brave --profile-directory="Default" --reuse-window --new-tab "https://regexone.com/"
+        ;;
+
+    "SeikousaiSchoolLoveF")
+        brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/gallery/157571/"
+        ;;
+    "JavTable")
+        brave --profile-directory=Default --reuse-window --new-tab "https://en.jable.tv/"
+        ;;
+
+    "MFYD028IHadSexWithMy")
+        brave --profile-directory=Default --reuse-window --new-tab "https://en.jable.tv/videos/MFYD-028/"
+        ;;
+
+    "GovernmentofWestBeng")
+        brave --profile-directory=Default --reuse-window --new-tab "https://apas.wb.gov.in/#"
+        ;;
+
+    "JavHDVideos")
+        brave --profile-directory=Default --reuse-window --new-tab "https://www4.javhdporn.net/"
         ;;
 
     *) 

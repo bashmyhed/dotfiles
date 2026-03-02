@@ -23,10 +23,10 @@ fi
 # 2. Get the active window's class and title using hyprctl and jq
 # Ensure the active window is actually Firefox
 active_window_info=$(hyprctl activewindow -j)
-if [[ "$(echo "$active_window_info" | jq -r '.class')" != "firefox" ]]; then
-    notify-send "Bookmark Script" "The active window is not Firefox. Aborting."
-    exit 1
-fi
+# if [[ "$(echo "$active_window_info" | jq -r '.class')" != "firefox" ]]; then
+#     notify-send "Bookmark Script" "The active window is not Firefox. Aborting."
+#     exit 1
+# fi
 
 raw_title=$(echo "$active_window_info" | jq -r '.title')
 
@@ -64,7 +64,7 @@ sed -i "s#\"[[:space:]]*|[[:space:]]*bemenu#\\n$entry_name\" | bemenu#" "$LAUNCH
 
 # Second, add the new `case` block just before the wildcard `*)` line.
 # This ensures the new entry is always reachable.
-new_case_block="    \"$entry_name\")\n        firefox --new-tab \"$url\"\n        ;;"
+new_case_block="    \"$entry_name\")\n        brave --profile-directory="Default" --reuse-window --new-tab \"$url\"\n        ;;"
 sed -i "/^[[:space:]]*\*)/i \\$new_case_block\n" "$LAUNCHER_SCRIPT"
 
 # 7. Notify the user of success
