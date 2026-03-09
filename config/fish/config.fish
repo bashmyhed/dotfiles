@@ -28,11 +28,12 @@ set -x XDG_DATA_HOME $HOME/.local/share
 set -x XDG_CACHE_HOME $HOME/.cache
 set -x XDG_STATE_HOME $HOME/.local/state
 
+set -x CARGO_HOME "$XDG_DATA_HOME/cargo"
 set -x HOSTFILE $XDG_CONFIG_HOME/bash/history
 set -x CUDA_CACHE_PATH $XDG_CACHE_HOME/nv
 set -x GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
 set -x JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64
-set -x JAVA_OPTS -Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java
+set -gx _JAVA_OPTIONS "-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
 set -x DOCKER_CONFIG $XDG_CONFIG_HOME/docker
 set -x GNUPGHOME $XDG_DATA_HOME/gnupg
 set -x PASSWORD_STORE_DIR $XDG_DATA_HOME/pass

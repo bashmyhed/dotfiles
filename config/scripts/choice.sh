@@ -38,13 +38,14 @@ case "$choice" in
         brave --profile-directory="Default" --reuse-window --new-tab "https://anigo.to/watch/black-butler-n431#ep=4"
         ;;
     "Novel") 
-        zathura zathura  ~/Documents/Dark\ Mode\ Ver/An\ Archdemons\ Dilemma\ -\ How\ to\ Love\ Your\ Elf\ Bride\ -\ Volume\ 07\ 『Premium\ Ver』\ dark.pdf
+        sioyek ~/Documents/Dark\ Mode\ Ver/An\ Archdemons\ Dilemma\ -\ How\ to\ Love\ Your\ Elf\ Bride\ -\ Volume\ 07\ 『Premium\ Ver』\ dark.pdf
 
  
-        brave --profile-directory="Default" --reuse-window --new-tab "file:///home/paul/Documents/Dark%20Mode%20Ver/An%20Archdemons%20Dilemma%20-%20How%20to%20Love%20Your%20Elf%20Bride%20-%20Volume%2007%20%E3%80%8EPremium%20Ver%E3%80%8F%20dark.pdf"
+        # brave --profile-directory="Default" --reuse-window --new-tab "file:///home/paul/Documents/Dark%20Mode%20Ver/An%20Archdemons%20Dilemma%20-%20How%20to%20Love%20Your%20Elf%20Bride%20-%20Volume%2007%20%E3%80%8EPremium%20Ver%E3%80%8F%20dark.pdf"
         ;;
     "Book") 
-       brave --profile-directory="Default" --reuse-window --new-tab ~/Documents/Let\'s\ Go\ \[Alex\ Edwards\].pdf  
+       # brave --profile-directory="Default" --reuse-window --new-tab ~/Documents/Let\'s\ Go\ \[Alex\ Edwards\].pdf  
+       sioyek ~/Documents/Let\'s\ Go\ [Alex\ Edwards].pdf
         ;;
     "MaidenCorruption") 
         brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/gallery/138180/"

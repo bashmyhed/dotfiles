@@ -43,7 +43,7 @@ follow = mouse  #can be set to keyboard or mouse
 	progress_bar_max_width = 280
 
 # Corner radius for the progress bar. 0 disables rounded corners.
-	progress_bar_corner_radius = 2
+	progress_bar_corner_radius = 4
 
 # Define which corners to round when drawing the progress bar. If progress_bar_corner_radius
 # is set to 0 this option will be ignored.
@@ -148,7 +148,7 @@ follow = mouse  #can be set to keyboard or mouse
 [urgency_low]
 	background = "#1E1E2E"
 	foreground = "#CDD6F4"
-	highlight = "#902DF3"
+	highlight = "#89b4fa"
 	icon = /usr/share/icons/notify/bell.svg
 
 [urgency_normal]
