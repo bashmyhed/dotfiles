@@ -57,7 +57,9 @@
     },
     "player-icons": {
       "default": ""
-    }
+    },
+     "max-length": 45,
+    "ellipsis": "..."
   },
   "hyprland/workspaces": {
     "on-click": "activate",

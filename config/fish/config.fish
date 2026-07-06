@@ -44,3 +44,6 @@ set -x PSQL_HISTORY $XDG_DATA_HOME/psql_history
 ## project variables ##
 
 ## End project variables ##
+
+# Hermes Agent — ensure ~/.local/bin is on PATH
+fish_add_path "$HOME/.local/bin"

@@ -1,12 +1,29 @@
 #!/bin/bash
 
 # Display a menu with options using bemenu
-choice=$(echo -e "github\nCV\nNovel\nJavTable\nJavHDVideos\nBook\nMaidenCorruption\nManga\nHttpServer
+choice=$(echo -e "github
+CV
+Novel
+JavTable
+JavHDVideos
+Book
+MaidenCorruption
+Artist: Tokiwa Midori
+Manga
+HttpServer
 JavHDVideos
 RegexOneLearnRegular
-SeikousaiSchoolLoveF
 MFYD028IHadSexWithMy
-GovernmentofWestBeng"| bemenu \
+GovernmentofWestBeng
+FuckedIntoSubmission
+HimegotoLipPage24Hen
+WatchSeptemCharmMagi
+WorldsEndHaremchapte
+WatchMinervanoKenshi
+JustamomentBrave
+MUDR326NaokiYamamoto
+KareshinoMenomaedeHa
+WatchAnalSanctuary2H" | bemenu \
     -b \
     -R 4 \
     -w \
@@ -60,9 +77,6 @@ case "$choice" in
         brave --profile-directory="Default" --reuse-window --new-tab "https://regexone.com/"
         ;;
 
-    "SeikousaiSchoolLoveF")
-        brave --profile-directory="Default" --reuse-window --new-tab "https://hentaifox.com/gallery/157571/"
-        ;;
     "JavTable")
         brave --profile-directory=Default --reuse-window --new-tab "https://en.jable.tv/"
         ;;
@@ -77,6 +91,46 @@ case "$choice" in
 
     "JavHDVideos")
         brave --profile-directory=Default --reuse-window --new-tab "https://www4.javhdporn.net/"
+        ;;
+
+    "FuckedIntoSubmission")
+        brave --profile-directory=Default --reuse-window --new-tab "https://hentaifox.com/gallery/159141/"
+        ;;
+
+    "HimegotoLipPage24Hen")
+        brave --profile-directory=Default --reuse-window --new-tab "https://hentaifox.com/g/159192/24/"
+        ;;
+
+    "WatchSeptemCharmMagi")
+        brave --profile-directory=Default --reuse-window --new-tab "https://hanime.tv/videos/hentai/septem-charm-magical-kanan-sp-dokidoki-summer-camp-1"
+        ;;
+
+    "WorldsEndHaremchapte")
+        brave --profile-directory=Default --reuse-window --new-tab "https://mangafire.to/read/shuumatsu-no-haremm.yqkq0/en/chapter-1"
+        ;;
+
+    "WatchMinervanoKenshi")
+        brave --profile-directory=Default --reuse-window --new-tab "https://hanime.tv/videos/hentai/minerva-no-kenshi-2"
+        ;;
+
+    "Artist: Tokiwa Midori")
+        brave --profile-directory=Default --reuse-window --new-tab "https://hentaifox.com/artist/tokiwa-midori/"
+        ;;
+
+    "JustamomentBrave")
+        brave --profile-directory=Default --reuse-window --new-tab "https://konachan.com/"
+        ;;
+
+    "MUDR326NaokiYamamoto")
+        brave --profile-directory=Default --reuse-window --new-tab "https://en.jable.tv/videos/mudr-326/"
+        ;;
+
+    "KareshinoMenomaedeHa")
+        brave --profile-directory=Default --reuse-window --new-tab "https://hentaifox.com/gallery/134479/"
+        ;;
+
+    "WatchAnalSanctuary2H")
+        brave --profile-directory=Default --reuse-window --new-tab "https://hanime.tv/videos/hentai/anal-sanctuary-2"
         ;;
 
     *) 
