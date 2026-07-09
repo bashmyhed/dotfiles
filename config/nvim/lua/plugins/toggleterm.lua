@@ -11,7 +11,6 @@ return {
         })
         vim.keymap.set("n", "<C-\\>", "<cmd>ToggleTerm<cr>")
         -- Exit terminal mode and go to the window above
-        vim.keymap.set("t", "<C-x>", [[<C-\><C-n><C-w>k]], { desc = "Go to code from terminal" })
 
     end
 }

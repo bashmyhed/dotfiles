@@ -11,23 +11,26 @@ return {
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
+        "folke/neodev.nvim",
     },
-
     config = function()
         local cmp = require('cmp')
-        local cmp_lsp = require("cmp_nvim_lsp")
+
         local capabilities = vim.tbl_deep_extend(
             "force",
-            {},
             vim.lsp.protocol.make_client_capabilities(),
-            cmp_lsp.default_capabilities()
+            require('cmp_nvim_lsp').default_capabilities()
         )
+
+        -- Global LSP defaults (Neovim 0.11+ built-in API)
+        vim.lsp.config("*", {
+            capabilities = capabilities,
+        })
 
         -- LSP keymaps on attach
         vim.api.nvim_create_autocmd('LspAttach', {
             callback = function(event)
                 local opts = { buffer = event.buf }
-
                 vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
                 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
                 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
@@ -41,16 +44,6 @@ return {
                 vim.keymap.set('n', '<F4>', vim.lsp.buf.code_action, opts)
             end,
         })
-
-        -- Fancy borders for hover/signature windows
-        vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-            vim.lsp.handlers.hover,
-            { border = "rounded" }
-        )
-        vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-            vim.lsp.handlers.signature_help,
-            { border = "rounded" }
-        )
 
         -- Diagnostics UI
         vim.diagnostic.config({
@@ -73,34 +66,43 @@ return {
         })
 
         require("fidget").setup({})
+        require("neodev").setup({})
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
+                "pyright",
+                "rust_analyzer",
+                "clangd",
+                "gopls",
+                "jdtls",
             },
-            handlers = {
-                function(server_name)
-                    require("lspconfig")[server_name].setup {
-                        capabilities = capabilities
-                    }
-                end,
-
-                ["lua_ls"] = function()
-                    require("lspconfig").lua_ls.setup {
-                        capabilities = capabilities,
-                        settings = {
-                            Lua = {
-                                runtime = { version = "Lua 5.1" },
-                                diagnostics = {
-                                    globals = { "vim", "it", "describe", "before_each", "after_each" },
-                                },
-                            }
-                        }
-                    }
-                end,
-            }
+            handlers = {}, -- avoid deprecated lspconfig.foo.setup
         })
 
+        -- Per-server settings via built-in API (nvim-lspconfig 0.11 style)
+        vim.lsp.config("lua_ls", {
+            settings = {
+                Lua = {
+                    runtime = { version = "Lua 5.1" },
+                    diagnostics = {
+                        globals = { "vim", "it", "describe", "before_each", "after_each" },
+                    },
+                },
+            },
+        })
+
+        vim.lsp.config("clangd", {})
+
+        -- Enable installed servers
+        vim.lsp.enable("lua_ls")
+        vim.lsp.enable("pyright")
+        vim.lsp.enable("rust_analyzer")
+        vim.lsp.enable("clangd")
+        vim.lsp.enable("gopls")
+        vim.lsp.enable("jdtls")
+
+        -- CMP
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
         cmp.setup({
@@ -117,8 +119,6 @@ return {
             }),
             sources = cmp.config.sources({
                 { name = 'path' },
-                { name = 'codeium' },
-                { name = 'cmdline' },
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' },
             }, {
@@ -127,19 +127,11 @@ return {
         })
         cmp.setup.cmdline('/', {
             mapping = cmp.mapping.preset.cmdline(),
-            sources = {
-                { name = 'buffer' }
-            }
+            sources = { { name = 'buffer' } }
         })
         cmp.setup.cmdline('?', {
             mapping = cmp.mapping.preset.cmdline(),
-            sources = {
-                { name = 'buffer' }
-            }
+            sources = { { name = 'buffer' } }
         })
-
-        -- Optional: C support
-        require 'lspconfig'.clangd.setup {}
-
     end
 }

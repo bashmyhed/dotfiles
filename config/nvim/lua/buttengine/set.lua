@@ -24,6 +24,9 @@ vim.opt.expandtab = true  -- Use spaces instead of actual TAB characters
 vim.opt.smartindent = true -- Auto-indent new lines (basic smart indent)
 vim.opt.autoindent = true  -- Copy indent from current line when starting a new line
 
+  vim.o.list = true
+  vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
 --  system clipboard things  --
 
 --copy
