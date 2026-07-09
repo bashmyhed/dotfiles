@@ -20,7 +20,7 @@ vim.opt.updatetime = 50
 
 vim.opt.tabstop = 4       -- A TAB character looks like 2 spaces
 vim.opt.shiftwidth = 4    -- Indent operations use 2 spaces
-vim.opt.expandtab = true  -- Use spaces instead of actual TAB characters
+vim.opt.expandtab = false -- Use spaces instead of actual TAB characters
 vim.opt.smartindent = true -- Auto-indent new lines (basic smart indent)
 vim.opt.autoindent = true  -- Copy indent from current line when starting a new line
 
