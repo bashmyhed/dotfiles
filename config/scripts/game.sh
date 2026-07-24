@@ -41,4 +41,29 @@ exe=$(find "$GAME_DIR" -maxdepth 1 -type f -iname "*.exe" | head -n 1)
 
 [ -z "$exe" ] && exit 1
 
-prime-run gamemoderun umu-run "$exe"
+# prefer game-specific oven for known titles; otherwise run the picked exe directly
+KNOWN_LOWER=$(printf '%s' "$choice" | tr '[:upper:]' '[:lower:]')
+PROTON_TOOL="$HOME/.local/share/Steam/compatibilitytools.d/GE-Proton11-1"
+PREFIX="$HOME/Games/.wine64"
+case "$KNOWN_LOWER" in
+  *assetto*corsa*competizione*|*acc*)
+    PROTON_TOOL="$HOME/.local/share/Steam/compatibilitytools.d/GE-Proton11-1"
+    PREFIX="$HOME/Games/.wine64"
+    export WINEPREFIX="$PREFIX"
+    export GAMEID=umu-805550
+    export PROTONPATH="$PROTON_TOOL"
+    export PROTON_FORCE_LARGE_ADDRESS_AWARE=1
+    export WINEESYNC=1
+    export WINEFSYNC=1
+    export DXVK_STATE_CACHE_PATH="$HOME/.cache/dxvk/acc-state"
+    export DXVK_SHADER_CACHE_PATH="$HOME/.cache/dxvk/acc-shaders"
+    mkdir -p "$DXVK_STATE_CACHE_PATH" "$DXVK_SHADER_CACHE_PATH"
+    unset PROTON_USE_WINED3D
+    unset WINE_D3D_CONFIG
+    export DXVK_ASYNC=1
+    prime-run gamemoderun umu-run "$HOME/Games/.wine64/drive_c/Games/Assetto Corsa Competizione/acc.exe"
+    ;;
+  *)
+    prime-run gamemoderun umu-run "$exe"
+    ;;
+esac

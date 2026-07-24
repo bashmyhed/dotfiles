@@ -6,6 +6,7 @@ vim.keymap.set("n", "<leader>t", ':Neotree filesystem reveal left<CR>',{})
 vim.keymap.set("n", "K", 'vim.lsp.buf.hover', {})
 
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tms<CR>")
 
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
   vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })

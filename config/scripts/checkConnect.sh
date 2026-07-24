@@ -6,6 +6,7 @@ trap 'rm -f "$PID_FILE"; exit 0' SIGTERM SIGINT
 
 interval=5
 notify_id=4242
+sleep 10
 
 while true; do
     output="$(kdeconnect-cli -a --id-only 2>/dev/null)"

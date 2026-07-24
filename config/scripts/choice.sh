@@ -23,7 +23,8 @@ WatchMinervanoKenshi
 JustamomentBrave
 MUDR326NaokiYamamoto
 KareshinoMenomaedeHa
-WatchAnalSanctuary2H" | bemenu \
+WatchAnalSanctuary2H
+FreePornVideosSexMov" | bemenu \
     -b \
     -R 4 \
     -w \
@@ -131,6 +132,10 @@ case "$choice" in
 
     "WatchAnalSanctuary2H")
         brave --profile-directory=Default --reuse-window --new-tab "https://hanime.tv/videos/hentai/anal-sanctuary-2"
+        ;;
+
+    "FreePornVideosSexMov")
+        brave --profile-directory=Default --reuse-window --new-tab "https://spankbang.party/"
         ;;
 
     *) 
